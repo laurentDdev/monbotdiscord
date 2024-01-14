@@ -1,0 +1,14 @@
+{
+  "token": "",
+  "guild" : {
+    "id": "",
+    "channels": {
+      "welcome" : "",
+      "rules" : ""
+    },
+    "roles": {
+      "member": "",
+      "validated": ""
+    }
+  }
+}

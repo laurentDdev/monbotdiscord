@@ -18,8 +18,9 @@ type GuildInfo struct {
 }
 
 type GuildChannels struct {
-	Welcome string `json:"welcome"`
-	Rules   string `json:"rules"`
+	Welcome      string `json:"welcome"`
+	Rules        string `json:"rules"`
+	Presentation string `json:"presentation"`
 }
 
 type GuildRoles struct {
@@ -43,8 +44,9 @@ func NewConfigBot() *ConfigBot {
 		Guild: GuildInfo{
 			ID: "",
 			Channel: GuildChannels{
-				Welcome: "",
-				Rules:   "",
+				Welcome:      "",
+				Rules:        "",
+				Presentation: "",
 			},
 			Roles: GuildRoles{
 				Member:    "",
@@ -63,4 +65,6 @@ func NewConfigBot() *ConfigBot {
 	return &data
 }
 
-var ConfigBotInstance = NewConfigBot()
+var (
+	ConfigBotInstance = NewConfigBot()
+)

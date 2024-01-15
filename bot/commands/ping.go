@@ -7,7 +7,7 @@ var CmdPing = discordgo.ApplicationCommand{
 	Description: "Renvoie pong",
 }
 
-func CmdPingResponse(interaction *discordgo.InteractionCreate) discordgo.InteractionResponse {
+func CmdPingResponse(session *discordgo.Session, interaction *discordgo.InteractionCreate) discordgo.InteractionResponse {
 	response := discordgo.InteractionResponse{
 		Type: discordgo.InteractionResponseChannelMessageWithSource,
 		Data: &discordgo.InteractionResponseData{

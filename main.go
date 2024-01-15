@@ -30,6 +30,7 @@ func main() {
 
 	// Part Command
 	myBot.AddCommand(commands.CmdPing)
+	myBot.AddCommand(commands.CmdClear)
 
 	myBot.RegisterCommands()
 

@@ -4,7 +4,8 @@
     "id": "",
     "channels": {
       "welcome" : "",
-      "rules" : ""
+      "rules" : "",
+      "presentation" : ""
     },
     "roles": {
       "member": "",

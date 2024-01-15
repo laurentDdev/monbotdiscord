@@ -1,9 +1,8 @@
-package utils
+package commands
 
 import (
 	"github.com/bwmarrin/discordgo"
 	"log"
-	"monbotdiscord/bot/commands"
 )
 
 func HandleSlashCommandExecute(session *discordgo.Session, interaction *discordgo.InteractionCreate) {
@@ -11,10 +10,16 @@ func HandleSlashCommandExecute(session *discordgo.Session, interaction *discordg
 
 	switch commandName {
 	case "ping":
-		response := commands.CmdPingResponse(interaction)
+		response := CmdPingResponse(session, interaction)
 		err := session.InteractionRespond(interaction.Interaction, &response)
 		if err != nil {
 			log.Println("Erreur lors de la réponse à la commande ping", err)
+		}
+	case "clear":
+		response := CmdClearResponse(session, interaction)
+		err := session.InteractionRespond(interaction.Interaction, &response)
+		if err != nil {
+			log.Println("Erreur lors de la réponse à la commande clear", err)
 		}
 	}
 }
